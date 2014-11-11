@@ -1,0 +1,55 @@
+<div class="container">
+<br>
+<a href="/contacts">Back to Idioms List</a>
+
+<br><br>
+<a href="/contacts/<%= @contact.id %>/edit">Edit This Idiom</a>
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <br>
+  <input type="submit" value="Delete">
+  <br><br>
+  <% if @comments.length == 0 %>
+ <h1><%= @contact.name %></h1>
+ <% end %>
+
+
+</form>
+<div class="comments">
+  <% @comments.each do |comment| %>
+    <%= erb :'_comment', locals: {comment: comment} %>
+  <% end %>
+</div>
+
+<div class="new_comment">
+</div>
+
+
+<h2>Contribute an Example:</h2>
+
+<div class="post_example">
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <label>Add Photo Link:</label><br>
+  <input type="text" name="comment[photo]"><br><br>
+  <label>Add Description:</label><br>
+  <textarea rows="2" cols="50" name="comment[description]"></textarea>
+
+  <input type="submit"> 
+</form>
+</div>
+
+
+<br><br><br>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+SET search_path = public, pg_catalog;
+
+--
+-- Data for Name: comments; Type: TABLE DATA; Schema: public; Owner: markmcquillen
+--
+
+COPY comments (id, user_id, contact_id, content, photo, created_at, updated_at) FROM stdin;
+1	1	1	\N	http://cdn.phys.org/newman/gfx/news/hires/2011/lastdinosaur.jpg	2014-10-23 17:36:36.051176	2014-10-23 17:36:36.051176
+2	2	1	\N	http://i.telegraph.co.uk/multimedia/archive/02147/divorce_2147804b.jpg	2014-10-23 17:36:36.056115	2014-10-23 17:36:36.056115
+3	3	1	\N	http://3.bp.blogspot.com/_X6vO-BK-FA8/TLtRMMSpF8I/AAAAAAAAAaI/ke89LsvZ08U/s1600/Alls+Well+3.jpg	2014-10-23 17:36:36.059303	2014-10-23 17:36:36.059303
+4	4	1	\N	http://i.dailymail.co.uk/i/pix/2010/07/30/article-1298931-0AA15506000005DC-117_468x286.jpg	2014-10-23 17:36:36.062519	2014-10-23 17:36:36.062519
+5	3	2	\N	http://smilepanic.com/wp-content/uploads/3087999_640px.jpg	2014-10-23 17:36:36.065801	2014-10-23 17:36:36.065801
+6	1	2	\N	http://i.dailymail.co.uk/i/pix/2009/10/21/article-1222049-06E899E8000005DC-901_468x286.jpg	2014-10-23 17:36:36.069795	2014-10-23 17:36:36.069795
+7	4	2	\N	http://grantfundingexpert.org/wp-content/uploads/grantsecrets/grant%20funding%20expert%20chris%20johnson%20community%20grants.jpg	2014-10-23 17:36:36.072896	2014-10-23 17:36:36.072896
+8	2	2	\N	http://shortstoriesofasinglegirl.com/wp-content/uploads/2014/06/smallworld3.jpg	2014-10-23 17:36:36.076157	2014-10-23 17:36:36.076157
+9	4	3	\N	http://blog-photos.dogvacay.com/blog/wp-content/uploads/2014/05/little-dog-puts-his-head-in-a-big-dogs-mouth.jpg	2014-10-23 17:36:36.079479	2014-10-23 17:36:36.079479
+10	3	3	\N	http://www.xookazine.nl/wp-content/uploads/2013/01/whipeout4.jpg	2014-10-23 17:36:36.082933	2014-10-23 17:36:36.082933
+11	1	3	\N	http://ifunnyweb.com/wp-content/uploads/funny-squirrel-mouth-full-nuts.jpg	2014-10-23 17:36:36.086089	2014-10-23 17:36:36.086089
+12	2	3	\N	https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10676406_10152745954181873_545084667142460_n.jpg?oh=c9126c8e2b8e4d523862340d757643bc&oe=54F1EB22&__gda__=1424279775_14ddbcb6a9cfef0b53041bacb7d0c061	2014-10-23 17:36:36.089302	2014-10-23 17:36:36.089302
+13	2	4	\N	http://us.cdn291.fansshare.com/photo/torontoraptors/vince-carter-toronto-raptors-nba-slam-dunk-contest-all-star-wallpapers-designs-nation-images-nba-wallpaper-1732366409.jpg	2014-10-23 17:36:36.092657	2014-10-23 17:36:36.092657
+14	4	4	\N	http://www.findapsychologist.org/wp-content/uploads/2013/07/Learning-disabilities1.jpg	2014-10-23 17:36:36.095921	2014-10-23 17:36:36.095921
+15	3	4	\N	http://static.squarespace.com/static/52a0933ce4b061dbb499e8aa/52bd6aeae4b097881153268c/52bd6aeae4b097881153268f/1388148454498/ardensday_cake.jpg	2014-10-23 17:36:36.098719	2014-10-23 17:36:36.098719
+16	1	4	\N	http://www.slimyogi.com/wp-content/themes/Minimal/images/copy/bette-calman.png	2014-10-23 17:36:36.101678	2014-10-23 17:36:36.101678
+17	2	5	\N	http://www.wbrz.com/images/news/bats.jpg	2014-10-23 17:36:36.104906	2014-10-23 17:36:36.104906
+18	4	5	\N	http://i.dailymail.co.uk/i/pix/2011/09/21/article-2040037-0E04BC2A00000578-667_634x324.jpg	2014-10-23 17:36:36.108135	2014-10-23 17:36:36.108135
+19	3	5	\N	http://ww2.kqed.org/news/wp-content/uploads/sites/10/2013/02/DevBootcamp.jpg	2014-10-23 17:36:36.111212	2014-10-23 17:36:36.111212
+20	1	5	\N	http://s.sidereel.com/cms/posts/189901/large/UP-ALL-NIGHT-Working-Late-and-Working-It-Episode-3-12-550x365.jpg	2014-10-23 17:36:36.114444	2014-10-23 17:36:36.114444
+\.
+
+
+--
+-- Name: comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: markmcquillen
+--
+
+SELECT pg_catalog.setval('comments_id_seq', 20, true);
+
+
+--
+-- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: markmcquillen
+--
+
+COPY contacts (id, user_id, name, email, phone, photo, created_at, updated_at) FROM stdin;
+1	1	All's Well That Ends Well	\N	\N	\N	2014-10-23 17:36:35.969498	2014-10-23 17:36:35.969498
+2	2	It's a Small World	\N	\N	\N	2014-10-23 17:36:35.980463	2014-10-23 17:36:35.980463
+3	3	Bite Off More Than You Can Chew	\N	\N	\N	2014-10-23 17:36:35.984148	2014-10-23 17:36:35.984148
+4	4	Piece of Cake	\N	\N	\N	2014-10-23 17:36:35.987408	2014-10-23 17:36:35.987408
+5	1	Graveyard Shift	\N	\N	\N	2014-10-23 17:36:35.990869	2014-10-23 17:36:35.990869
+\.
+
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: markmcquillen
+--
+
+SELECT pg_catalog.setval('contacts_id_seq', 5, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: markmcquillen
+--
+
+COPY schema_migrations (version) FROM stdin;
+20141012185325
+20141019193413
+20141021100500
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: markmcquillen
+--
+
+COPY users (id, name, encrypted_password, created_at, updated_at) FROM stdin;
+1	Paul	$2a$10$7xxrqSsytd8Q0iVU1qUOouFniKgFqFU7vLOJsgyRLgmpFwb9DSe4m	2014-10-23 17:36:36.019943	2014-10-23 17:36:36.019943
+2	Mark	$2a$10$7xxrqSsytd8Q0iVU1qUOouFniKgFqFU7vLOJsgyRLgmpFwb9DSe4m	2014-10-23 17:36:36.024994	2014-10-23 17:36:36.024994
+3	Kathy	$2a$10$7xxrqSsytd8Q0iVU1qUOouFniKgFqFU7vLOJsgyRLgmpFwb9DSe4m	2014-10-23 17:36:36.028413	2014-10-23 17:36:36.028413
+4	Sarah	$2a$10$7xxrqSsytd8Q0iVU1qUOouFniKgFqFU7vLOJsgyRLgmpFwb9DSe4m	2014-10-23 17:36:36.031829	2014-10-23 17:36:36.031829
+\.
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: markmcquillen
+--
+
+SELECT pg_catalog.setval('users_id_seq', 4, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+

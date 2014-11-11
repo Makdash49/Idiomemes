@@ -1,0 +1,28 @@
+<div class="post_comment">
+  <div class="comment">
+	  <h1><%= @contact.name %></h1>
+	  <img src="<%= comment.photo %>" alt="" style="width:600px;">
+	  <br>
+	  <%= comment.description %><br>
+	  <%= "Posted by: " + comment.user.name %><br><br>
+	  Comments:<br>
+
+	  <% comment.replies.each do |reply| %>
+	  <!-- Haha!  I got the association to work, but it's totally wrong!  The user of the comment is not the person who created the reply!  :) -->
+		  <%= reply.user.name + ": " %>
+		  <%= reply.reaction %><br>
+
+			<!-- <div class="new_reply<%= reply.id %>">
+			</div> -->
+		<% end %>
+	</div>
+	<br>
+
+
+	<form action="/contacts/<%= @contact.id %>/comments/<%= comment.id %>" method="post">
+		<label>Add Comment:</label><br>
+		<textarea rows="2" cols="50" name="reply[reaction]"></textarea>
+		<input type="submit"> 
+	</form><br><br>
+
+</div>

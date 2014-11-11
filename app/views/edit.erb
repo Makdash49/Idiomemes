@@ -1,0 +1,10 @@
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>Name</label>
+  <input type="text" name="person[name]" value="<%= @contact.name %>">
+
+
+  <input type="submit">
+
+  </form>

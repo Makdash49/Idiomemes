@@ -1,0 +1,43 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  background-color: white
+}
+th {
+  text-align: left;
+}
+
+.contact_form {
+	display: none;
+} 
+
+body {
+	background-color: #778899
+}
+
+.big_text {
+	font-size: 450%;
+	text-align:center;
+	font-family: "Times New Roman", Times, serif;
+	line-height: 0%;
+}
+
+#logout {
+	float:right;
+
+}
+
+.cartoon {
+	display: block;
+	margin-left: 19%;
+  margin-right: auto;
+
+}
+
+
+
+
+
+

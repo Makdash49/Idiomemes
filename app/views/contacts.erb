@@ -1,0 +1,36 @@
+<div class="container">
+
+	<div class="big_text">
+		<h2>Idiomemes!</h2>
+	</div>
+
+	<img class="cartoon" src="http://media-cache-ec0.pinimg.com/236x/5c/f2/13/5cf213fdcec1c33d65b8618461441f95.jpg" alt="" style="width:350px">
+
+
+	<h4>Choose an idiom then post a photo that illustrates it.  It's fun!</h4>
+	<ul> <!-- underline -->
+		<% @contacts.each do |contact| %> <!-- iterates through variable passed here. -->
+		<li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a></li> <!-- Prints the contact names as links to their pages. -->
+		<% end %>
+	</ul>
+
+	<a class="create_contact" href="/contacts/new">Post Another Idiom:</a>
+
+	<!-- Creates the path for creating a new contact. -->
+	<div class="contact_form">
+		<%= erb :_new, :layout => false %>
+	</div>
+
+	<br><br><br>
+
+	<a href="http://www.idiomsite.com/">Wanna see a LONG LIST of idioms?</a>
+
+	<br><br>
+
+	<form id="logout" action="/logout">
+		<input type="submit" value="Logout">
+	</form>
+
+	<br>
+
+</div>
